@@ -229,6 +229,102 @@ strong {
   display: block;
 }
 
+/* 
+Additional Classes */
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: max-content; /* width grows to fit all items */
+  animation: marqueeScroll 20s linear infinite;
+}
+
+.partner-item {
+  flex: 0 0 auto; /* prevents shrinking */
+  width: 200px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.partner-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.section-padding {
+  padding: 40px 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-grid img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
 
 /*---------------------------------------
   PROGRESS BAR               
